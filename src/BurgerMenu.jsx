@@ -219,7 +219,7 @@ export default function BurgerMenu({
 						</div>
 						<br />
 						<a
-							href="https://github.com/UCL/captallite"
+							href="https://github.com/UCL/captallite/tree/captallite-v1"
 							id="gh"
 							className="bm__item__"
 						> 

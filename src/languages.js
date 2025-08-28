@@ -31,12 +31,12 @@ const marcosUrl =
 const fabienUrl = "https://www.linkedin.com/in/fabien-moustard-996998227";
 const tomUrl =
 	"https://www.ucl.ac.uk/advanced-research-computing/people/tom-couch";
-const mukiUrl = "https://www.ucl.ac.uk/geography/muki-haklay-facss";
+const mukiUrl = "https://profiles.ucl.ac.uk/8073-muki-haklay";
 const jeromeUrl = "https://www.ucl.ac.uk/anthropocene/people/dr-jerome-lewis";
 const jonathanUrl =
 	"https://www.ucl.ac.uk/advanced-research-computing/people/jonathan-cooper";
 const claireUrl =
-	"https://www.ucl.ac.uk/civil-environmental-geomatic-engineering/people/dr-claire-ellul";
+	"https://profiles.ucl.ac.uk/684-claire-ellul";
 const amandaUrl =
 	"https://www.ucl.ac.uk/advanced-research-computing/people/amanda-ho-lyn";
 const jedUrl = "https://www.durham.ac.uk/staff/jed-stevenson/";
@@ -72,7 +72,7 @@ i18next.use(initReactI18next).init({
 								// <br /><strong>Captallite</strong> is a platform for simple, private crowdsourcing that turns photos stored in the phone or WhatsApp into maps.<br />
 
 				aboutContent: `
-								<br /><strong>Captallite</strong> is a crowdsourcing platform to connect with people on the ground and instantly turn past and new photos into maps. <br />
+								<br /><strong>Captallite</strong> is a crowdsourcing platform to connect with people on the ground and instantly turn old and new photos into maps. <br />
 
 								<br /><strong>Captallite Business Mappers</strong> are people on the ground who earn money creating maps with Captallite. <br />
 								`,
@@ -112,8 +112,17 @@ i18next.use(initReactI18next).init({
 					"Captallite Web: A platform that brings people together to create and share WhatsApp Maps",
 
 				people: "People",
-				peopleContent: `<br />Captallite is spining out from University College London (UCL), where it is being developed by the Extreme Citizen Science Lab (Geography Dept.) and the Advanced Research Computing Centre, with support from external partners and contributors. <br>
+				peopleContent: `<br />Captallite is spining out from University College London (UCL), where it is being developed by the Extreme Citizen Science Lab (Geography Dept.) and the Advanced Research Computing Centre (ARC). <br>
+					<br />Currently the core Captallite team is:<br>
+					<br />
+					<a href='${marcosUrl}'>Marcos Moreu </a><br>
+					<a href='${mukiUrl}'>Muki Haklay </a><br>
+					<a href='${claireUrl}'>Claire Ellul </a><br>
+					<a href='${tomUrl}'>Tom Couch </a><br>
+					<a href='${jedUrl}'>Jed Stevenson </a><br>
+					<br />
 
+					Captallite builds on the Kapta and Sapelli software and research with <a href='${fabienUrl}'>Fabien Moustard</a>, <a href='${jeromeUrl}'>Jerome Lewis </a> and the ExCiteS and ARC teams. This research is/was funded by UCL and the European Research Council.
 				`,
 
 				

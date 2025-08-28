@@ -1,5 +1,5 @@
 **What is Captallite**  
-Captallite is a crowdsourcing platform to connect with people on the ground and instantly turn past and new photos into maps.
+Captallite is a crowdsourcing platform to connect with people on the ground and instantly turn old and new photos into maps.
 
 Captallite Business Mappers are people on the ground who earn money creating maps with Captallite.
 
@@ -10,7 +10,7 @@ Decades of satellite imagery archives help us understand change from space. To b
 
 # Guidance for Developers
 
-- [Captallite first prototypes](https://github.com/MarcosMoreu/Kapta-Prototyping/commit/a06af733f0179d17b44190a7791395d624034477)
+- [Captallite first prototypes from 2021](https://github.com/MarcosMoreu/Kapta-Prototyping/commit/a06af733f0179d17b44190a7791395d624034477)
   
 ## Requirements
 
@@ -43,7 +43,16 @@ Captallite requires a configuration file to be created in the src directory. The
 
 # People
 
-Captallite is spinning out from University College London (UCL). Currently, the core Captallite team is:  
+Captallite is spining out from University College London (UCL), where it is being developed by the Extreme Citizen Science Lab (Geography Dept.) and the Advanced Research Computing Centre (ARC). Currently the core Captallite team is:
+- [Marcos Moreu](https://www.linkedin.com/in/marcosmoreubadia)
+- [Tom Couch](https://www.ucl.ac.uk/advanced-research-computing/people/tom-couch)
+- [Muki Haklay](https://profiles.ucl.ac.uk/8073-muki-haklay)
+- [Claire Ellul](https://profiles.ucl.ac.uk/684-claire-ellul)
+- [Jed Stevenson](https://www.durham.ac.uk/staff/jed-stevenson/)			
+
+Captallite builds on the Kapta and Sapelli software and research with [Fabien Moustard](https://www.linkedin.com/in/fabien-moustard-996998227)
+, [Jerome Lewis](https://www.ucl.ac.uk/anthropocene/people/dr-jerome-lewis) and the ExCiteS and ARC teams. This research is/was funded by UCL and the European Research Council.
+
 
 # Legal disclaimer
 
