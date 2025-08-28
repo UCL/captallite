@@ -227,6 +227,7 @@ export default function BurgerMenu({
 						</a>
 						<p style={{fontSize: "12px", color:"black", fontStyle: "italic"}}>Captallite is open source</p>
 
+
 					</div>
 				</div>
 			</div>
