@@ -30,7 +30,7 @@ const marcosUrl =
 	"https://www.linkedin.com/in/marcosmoreubadia";
 const fabienUrl = "https://www.linkedin.com/in/fabien-moustard-996998227";
 const tomUrl =
-	"https://www.ucl.ac.uk/advanced-research-computing/people/tom-couch";
+	"https://profiles.ucl.ac.uk/39574";
 const mukiUrl = "https://profiles.ucl.ac.uk/8073-muki-haklay";
 const jeromeUrl = "https://www.ucl.ac.uk/anthropocene/people/dr-jerome-lewis";
 const jonathanUrl =
@@ -82,10 +82,10 @@ i18next.use(initReactI18next).init({
 				To achieve that, crowdsourcing needs to be embedded in the technology and the data that people already have (i.e. photos and chats). <br /><br />But simplifying crowdsourcing is not enough to popularise it. Cash and trust are also needed. Crowdsourcing needs to transition towards paid-first (not volunteered-first) and private-first (not open-first). <u>A peer-reviewed publication breaking down and justifying this statement will be available here soon.</u><br />`,
 				caseStudies: " 10+ years trying",
 				caseStudiesContent: `<br />Captallite builds on years of research in Volunteered Geographic Information (VGI) and Extreme Citizen Science across
-				 Europe and with communities living in some of the most challenging environments on Earth (see 🌍 <a href='${ecsanvismap}'>World Map of our past projects (2010-2023)</a>. 
-				<br /><br />Some of our work has evolved from highly participatory processes, to simplifying data collection via WhatsApp, and now with Captallite we aim to simplify things even further to popularise remunerated, private-first crowdsourcing.
-				<br /><br />Below are some articles and maps of our past pilot projects: <br />🇳🇬 (2021) <a href='${extremeCitizenUrl}'>Linking Messaging & Mapping for Farming in Nigeria.</a><br />🇪🇹 (2023) <a href='${ethio2023}'>Wisdom of the Crowd in the Age of AI: Water.</a>
-				<br />🇪🇹 (2024) <a href='${whatsappMapsUrl}'>WhatsApp Maps of Population & Water Infrastructure in rural Ethiopia.</a> <br />🇬🇧 (2025) <a href='${GibraltarUrl}'>Ten WhatsApp Maps of Places in Gibraltar, UK.</a>`,
+				 Europe and with communities living in some of the most challenging environments on Earth (see 🌍 <a href='${ecsanvismap}' target="_blank" rel="noopener noreferrer">World Map of our past projects 2010-2023</a>). 
+				<br /><br />Some of our work has evolved from highly participatory processes, to simplifying data collection via WhatsApp (👉 <a href='${firstwhatsappMapsUrl}' target="_blank" rel="noopener noreferrer">Is this the first-ever WhatsApp Map?</a>), and now with Captallite we aim to simplify crowdsourcing even further and connect those who need ground data with people on the ground.
+				<br /><br />Below are some articles and maps of our past pilot projects: <br />🇳🇬 (2021) <a href='${extremeCitizenUrl}' target="_blank" rel="noopener noreferrer">Linking Messaging & Mapping for Farming in Nigeria.</a><br />🇪🇹 (2023) <a href='${ethio2023}' target="_blank" rel="noopener noreferrer">Wisdom of the Crowd in the Age of AI: Water.</a>
+				<br />🇪🇹 (2024) <a href='${whatsappMapsUrl}' target="_blank" rel="noopener noreferrer">WhatsApp Maps of Population & Water Infrastructure in rural Ethiopia.</a> <br />🇬🇧 (2025) <a href='${GibraltarUrl}' target="_blank" rel="noopener noreferrer">Ten WhatsApp Maps of Places in Gibraltar, UK.</a>`,
 				// caseStudiesContent: `<ul style="padding-left: 1.2em; margin: 0;">
 						
 				// 	<li>
@@ -115,14 +115,14 @@ i18next.use(initReactI18next).init({
 				peopleContent: `<br />Captallite is spining out from University College London (UCL), where it is being developed by the Extreme Citizen Science Lab (Geography Dept.) and the Advanced Research Computing Centre (ARC). <br>
 					<br />Currently the core Captallite team is:<br>
 					<br />
-					<a href='${marcosUrl}'>Marcos Moreu </a><br>
-					<a href='${mukiUrl}'>Muki Haklay </a><br>
-					<a href='${claireUrl}'>Claire Ellul </a><br>
-					<a href='${tomUrl}'>Tom Couch </a><br>
-					<a href='${jedUrl}'>Jed Stevenson </a><br>
+					<a href='${marcosUrl}' target="_blank" rel="noopener noreferrer">Marcos Moreu </a><br>
+					<a href='${mukiUrl}' target="_blank" rel="noopener noreferrer">Muki Haklay </a><br>
+					<a href='${claireUrl}' target="_blank" rel="noopener noreferrer">Claire Ellul </a><br>
+					<a href='${tomUrl}' target="_blank" rel="noopener noreferrer">Tom Couch </a><br>
+					<a href='${jedUrl}' target="_blank" rel="noopener noreferrer">Jed Stevenson </a><br>
 					<br />
 
-					Captallite builds on the Kapta and Sapelli software and research with <a href='${fabienUrl}'>Fabien Moustard</a>, <a href='${jeromeUrl}'>Jerome Lewis </a> and the ExCiteS and ARC teams. This research is/was funded by UCL and the European Research Council.
+					Captallite builds on the Kapta and Sapelli software and research with Fabien Moustard, Jerome Lewis and the ExCiteS and ARC teams. This research is/was funded by UCL and the European Research Council.
 				`,
 
 				

@@ -493,7 +493,7 @@ export function MapActionArea({
                             style={{ marginBottom: "5px" }}
                         >
                             <div className="map-action-icon">{premiumIcn}</div>
-                            <span className="map-action-label" style={{ color: "#3a3a3a", }}>Premium</span>
+                            <span className="map-action-label" style={{ color: "#3a3a3a", }}>Pro</span>
                         </button>
                     )}
                 </div>
@@ -722,7 +722,7 @@ export function SearchModal({ isOpen, setIsOpen, isPremium, isRegisterMapper, se
                 {isRegisterMapper
                     ? "Connect"
                     : isPremium
-                        ? "Premium"
+                        ? "Pro"
                         : "Search"}
             </div>
             <div className="modal-content">
@@ -753,7 +753,8 @@ export function SearchModal({ isOpen, setIsOpen, isPremium, isRegisterMapper, se
                             onClick={() => {
                                 window.open(
                                     "https://form.typeform.com/to/EAUd0TVm",
-                                    "_blank"
+                                    "_blank",
+									"noopener noreferrer"
                                 );
                             }}
                         >
@@ -769,7 +770,8 @@ export function SearchModal({ isOpen, setIsOpen, isPremium, isRegisterMapper, se
                                 onClick={() => {
                                     window.open(
                                         "https://form.typeform.com/to/QomOwX9N",
-                                        "_blank"
+                                        "_blank",
+									    "noopener noreferrer"
                                     );
                                 }}
                             >
@@ -782,10 +784,10 @@ export function SearchModal({ isOpen, setIsOpen, isPremium, isRegisterMapper, se
                     <>
                         <p style={{ textAlign: "center" }}>
                             <br />
-                            The <strong>free version</strong> allows organisations to visualise and edit one or multiple maps and download the data for spatial analysis in QGIS, ArcGIS etc.
+                            The <strong>Free version</strong> allows organisations to visualise and edit one or multiple maps and download the data for spatial analysis in QGIS, ArcGIS etc.
                             <br />
                             <br />
-                            <strong>Premium</strong> allows organisations to run crowdmapping campaigns with Task IDs, manage large map datasets and use dashboards & AI Agents for advanced visualisation & analysis.
+                            The<strong> Pro version</strong> allows organisations to run crowdmapping campaigns with Task IDs, manage large map datasets and use dashboards & AI Agents for advanced visualisation & analysis.
 
                         </p>
                         <div className="option-button-container">
@@ -793,10 +795,10 @@ export function SearchModal({ isOpen, setIsOpen, isPremium, isRegisterMapper, se
                                 className="btn"
                                 style={{ borderRadius: "20px", height: "45px" }}
                                 onClick={() => {
-                                    window.open("https://form.typeform.com/to/dJ4XaduT", "_blank");
+                                    window.open("https://form.typeform.com/to/dJ4XaduT", "_blank","noopener noreferrer");
                                 }}
                             >
-                                Request a Premium Demo
+                                Request a Pro Demo
                             </button>
                         </div>
 

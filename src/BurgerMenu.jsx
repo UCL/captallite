@@ -104,7 +104,7 @@ export default function BurgerMenu({
 										<span style={{ fontSize: '0.95rem' }}>👉 
 
 										 <a
-										 href="https://youtu.be/TOL5Cash3f8"
+										 href="https://youtu.be/inwD6xM2Y2g"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             // href="#"
@@ -145,19 +145,19 @@ export default function BurgerMenu({
                                         >Tutorial for organisations
                                           
                                         </a></span>
-										<p>The <strong>free version</strong> allows you to visualise and edit one or multiple maps in Captallite mobile or PC, or export to QGIS, ArcGIS etc.
+										<p>The <strong>Free version</strong> allows to visualise and edit one or multiple maps in Captallite mobile or PC, or export to QGIS, ArcGIS etc.
 										<br />
 										<br />
-                           				 <strong>Premium</strong> allows organisations to run crowdmapping campaigns with Task IDs, manage large map datasets and use dashboards & AI Agents for advanced visualisation & analysis.</p>
+                           				The <strong>Pro version</strong> allows to run crowdmapping campaigns with Task IDs, manage large map datasets and use dashboards & AI Agents for advanced visualisation & analysis.</p>
 										 <div className="option-button-container">
 										<button
 											className="btn"
 											style={{ backgroundColor: '#1fcbff', height: '25px',  fontSize: "15px" }}
 											onClick={() => {
-												window.open("https://form.typeform.com/to/dJ4XaduT", "_blank");
+												window.open("https://form.typeform.com/to/dJ4XaduT", "_blank","noopener noreferrer");
 											}}
 										>
-											Request a Premium Demo
+											Request a Pro Demo
 										</button>
                        				 </div>
                                     </div>
@@ -208,7 +208,8 @@ export default function BurgerMenu({
                             onClick={() => {
                                 window.open(
                                     "https://form.typeform.com/to/jnnU3B1I",
-                                    "_blank"
+                                    "_blank",
+									"noopener noreferrer"
                                 );
                             }}
                             style={{ height: '45px', backgroundColor: '#1fcbff', fontSize: "15px" }}
@@ -220,6 +221,8 @@ export default function BurgerMenu({
 						<br />
 						<a
 							href="https://github.com/UCL/captallite/tree/captallite-v1.0"
+							target="_blank"
+							rel="noopener noreferrer"
 							id="gh"
 							className="bm__item__"
 						> 
