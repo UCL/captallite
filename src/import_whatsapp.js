@@ -105,12 +105,44 @@ const processFile = (file, setDataDisplayMap) => {
                             .then(async function (geojsonContent) {
                                 try {
                                     const [data, name] = processGeoJson(geojsonContent);
+                                    
+                                    // Create a new zip file that includes both GeoJSON and all images
+                                    const newZip = new JSZip();
+                                    
+                                    // Add the GeoJSON file
+                                    const geojsonBlob = new Blob([geojsonContent], {
+                                        type: "application/geo+json",
+                                    });
+                                    newZip.file("map.geojson", geojsonBlob);
+                                    
+                                    // Add all image files from the original zip
+                                    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp', '.tiff', '.svg'];
+                                    for (const filename of filenames) {
+                                        const isImage = imageExtensions.some(ext => 
+                                            filename.toLowerCase().endsWith(ext)
+                                        );
+                                        if (isImage && contents.files[filename]) {
+                                            const imageData = await zip.file(filename).async("blob");
+                                            newZip.file(filename, imageData);
+                                        }
+                                    }
+                                    
+                                    // Generate the new zip file as a Blob
+                                    const newZipBlob = await newZip.generateAsync({ type: "blob" });
+                                    
+                                    // Convert the Blob to a File object
+                                    const processedFile = new File(
+                                        [newZipBlob],
+                                        `${name || "processed_map"}.zip`,
+                                        { type: "application/zip" }
+                                    );
+                                    
                                     setDataDisplayMap(data, name, zip);
-									globalProcessedChatFile = file;
+									globalProcessedChatFile = processedFile;
 									
 									// Calculate and store image size information immediately
 									if (window.calculateAndStoreImageSize) {
-										window.calculateAndStoreImageSize(file);
+										window.calculateAndStoreImageSize(processedFile);
 									}
 
                                 } catch (error) {
