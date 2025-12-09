@@ -106,7 +106,7 @@ export async function uploadProcessedChat(file, fileNameWAMap, setButtonText, se
         // }
         let downloadUrl;
 
-        if (visibility === "private-sensitive") {
+        if (visibility === "private-sensitive") { //not using it now >> it always goes to "else"
             // Step 3a: Fetch the pre-signed download URL
             const downloadResponse = await fetchWithRetry(`${API_URL}/download-url?fileName=${fileNameWAMap}&visibility=${visibility}&taskIdFolder=${taskIdFolder}&tagsFolder=${tagsFolder}`);
 
@@ -120,7 +120,7 @@ export async function uploadProcessedChat(file, fileNameWAMap, setButtonText, se
             // downloadUrl = `${BUCKET_BASE_URL}/uploads/${visibility}/${taskIdFolder}/${tagsFolder}/${fileNameWAMap}`;
                downloadUrl = `${BUCKET_BASE_URL}/${taskIdFolder}/${tagsFolder}/${fileNameWAMap}`;
 
-            console.log("🌍 Public Download URL with prefix rules and referer checks:", downloadUrl);
+            // console.log("🌍 Download URL with prefix rules and referer checks:", downloadUrl);
         }
 
         setButtonText("uploadReady");

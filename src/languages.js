@@ -72,13 +72,13 @@ i18next.use(initReactI18next).init({
 								// <br /><strong>Captallite</strong> is a platform for simple, private crowdsourcing that turns photos stored in the phone or WhatsApp into maps.<br />
 
 				aboutContent: `
-								<br /><strong>Captallite</strong> is a crowdsourcing platform to connect with people on the ground and instantly turn old and new photos into maps. <br />
+								<br /><strong>Captallite</strong> is a crowdsourcing platform to connect with people on the ground and instantly turn everyday photos into maps. <br />
 
 								<br /><strong>Captallite Business Mappers</strong> are people on the ground who earn money creating maps with Captallite. <br />
 								`,
 				why: "Why Captallite",
 				whyContent: `
-				<br />Decades of satellite imagery archives help us understand change from space.<br /><br />To better understand change from the ground, we need to unlock the photos from the past that are in our phones, and incentivise the collection of new ones by many people, including the billions whose stories and data are left out in traditional crowdsourcing.<br /><br />
+				<br />Decades of satellite imagery archives help us understand change from space.<br /><br />To better understand change from the ground, we need to unlock the photos from the past that are on our phones, and incentivise the collection of new ones by many people, including the billions whose stories and data are left out in traditional crowdsourcing.<br /><br />
 				To achieve that, crowdsourcing needs to be embedded in the technology and the data that people already have (i.e. photos and chats). <br /><br />But simplifying crowdsourcing is not enough to popularise it. Cash and trust are also needed. Crowdsourcing needs to transition towards paid-first (not volunteered-first) and private-first (not open-first). <u>A peer-reviewed publication breaking down and justifying this statement will be available here soon.</u><br />`,
 				caseStudies: " 10+ years trying",
 				caseStudiesContent: `<br />Captallite builds on years of research in Volunteered Geographic Information (VGI) and Extreme Citizen Science across
@@ -126,7 +126,7 @@ i18next.use(initReactI18next).init({
 				`,
 
 				
-				legalDisclaimer: `<br />The Captallite team has made every effort to develop an app that parses WhatsApp chats and Photos to create maps with the highest possible accuracy. However, we cannot accept responsibility for any errors, omissions, or inconsistencies that may occur. Please always make your own judgement about the accuracy of the maps and validate the information using other sources. While we take data privacy and security seriously, Captallite cannot be held responsible for any misuse of data shared via the app. If you encounter any issues or have feedback, please reach out.</a>`,
+				legalDisclaimer: `<br />The Captallite team has made every effort to develop an app that converts photos and WhatsApp chats into maps with the highest possible accuracy. However, we cannot accept responsibility for any errors, omissions, or inconsistencies that may occur. Please always make your own judgement about the accuracy of the maps and validate the information using other sources. While we take data privacy and security seriously, Captallite cannot be held responsible for any misuse of data shared via the app. If you encounter any issues or have feedback, please reach out.</a>`,
 
 				confirm: "Confirm",
 				yes: "Yes",
