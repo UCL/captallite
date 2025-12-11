@@ -559,6 +559,7 @@ export function CreateModal({ isOpen, setIsOpen, isUploading, setIsUploading }) 
                         <p style={{ textAlign: "center" }}>Convert into maps the photos stored in your phone or WhatsApp</p>
 
                        <button
+                            id="phoneGalleryButton"
                             className="btn"
                             onClick={() => setActiveOption('photos')}
                             style={{ height: '45px' }}
@@ -652,6 +653,7 @@ export function CreateModal({ isOpen, setIsOpen, isUploading, setIsUploading }) 
                                                 
                         <div className="option-button-container">
                             <button
+                                id="selectPhotosButton"
                                 className="btn"
                                 onClick={() => {
                                     // Get the filePickerButton, but modify it to only accept images
@@ -824,7 +826,6 @@ export function ShareModal({
 }) {
 
     // console.log("ShareModalclick", dataDisplayProps);
-    if (!isOpen) return null;
     
     // Helper function to check if we're dealing with image data
     const checkIsImageData = () => dataDisplayProps.dataset && dataDisplayProps.dataset.isImageData;
@@ -862,6 +863,16 @@ export function ShareModal({
     // High Resolution button state
     const [highResButtonText, setHighResButtonText] = useState("Need High Resolution?"); // Text for high res button
 
+    // Auto-click taskID upload button and populate input when in automation mode
+    useEffect(() => {
+        if (isOpen && window.taskIdAutomation && !showTaskIdUpload) {
+            setTimeout(() => {
+                setShowTaskIdUpload(true);
+                setTaskIdInput(window.taskIdAutomation);
+            }, 300);
+        }
+    }, [isOpen, showTaskIdUpload]);
+    
     // No size check when modal opens - we'll check only when user clicks share
     useEffect(() => {
         if (isOpen && !isImageSizeCalculated) {
@@ -905,6 +916,14 @@ export function ShareModal({
             }
         }
     }, [isOpen, globalProcessedChatFile, isImageSizeCalculated, checkIsImageData, dataDisplayProps.dataset]);
+
+    // useClickOutside hook must be called before conditional return
+    useClickOutside(shareModalRef, () => {
+        if (!isUploading) setIsOpen(false);
+    });
+
+    // Don't render anything if modal is not open
+    if (!isOpen) return null;
 
     const handleShareDataClick = async () => {
         // Set uploading state
@@ -1594,9 +1613,7 @@ const generateCSV = (dataset) => {
     URL.revokeObjectURL(url);
 };
 
-    useClickOutside(shareModalRef, () => {
-        if (!isUploading) setIsOpen(false);
-    });
+    // useClickOutside already called before conditional return - remove duplicate
 
     return (
 
@@ -1899,7 +1916,6 @@ const generateCSV = (dataset) => {
                                             outline: "none",
                                             boxShadow: "0 1px 3px rgba(0,0,0,0.1)"
                                         }}
-                                        autoFocus
                                         disabled={isUploading}
                                     />
                                     {/* {taskIdError && (
@@ -1929,6 +1945,7 @@ const generateCSV = (dataset) => {
                                             outline: "none",
                                             boxShadow: "0 1px 3px rgba(0,0,0,0.1)"
                                         }}
+                                        autoFocus
                                         disabled={isUploading}
                                     />
                                 </div>

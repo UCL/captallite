@@ -147,8 +147,34 @@ function App() {
     const [isOnline, setIsOnline] = useState(navigator.onLine);
     const [showOfflineMessage, setShowOfflineMessage] = useState(false);
     const [globalLoadingMessage, setGlobalLoadingMessage] = useState(false);
+    const [taskIdAutomation, setTaskIdAutomation] = useState(null); // State for taskID automation
 
     useEffect(() => {
+        // Check for taskID parameter in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const taskIdParam = urlParams.get('taskID');
+        
+        if (taskIdParam) {
+            console.log('TaskID detected:', taskIdParam);
+            window.taskIdAutomation = taskIdParam;
+            
+            // Hide loader and click create button
+            setIsLoaderVisible(false);
+            setTimeout(() => {
+                const createBtn = document.getElementById('create');
+                if (createBtn) {
+                    console.log('Clicking create button');
+                    createBtn.click();
+                                setTimeout(() => {
+
+                    const phoneGalleryBtn = document.getElementById('phoneGalleryButton');
+                    phoneGalleryBtn.click();
+                                }, 0.01);
+                   
+                }
+            }, 1000);
+        }
+        
         // Initialize GA and SW
         initServiceWorker(setFileToParse);
 
@@ -286,6 +312,7 @@ function App() {
     const [isLoginVisible, setIsLoginVisible] = useState(false);
     const [isWelcomeVisible, setIsWelcomeVisible] = useState(false);
     const [showBrand, setShowBrand] = useState(false); // Delay brand visibility
+    const [isShareModalOpen, setIsShareModalOpen] = useState(false); // State for ShareModal
 
     useEffect(() => {
         setShowBrand(true)
@@ -420,12 +447,48 @@ function App() {
                         window.hideLoadingOnMapRender();
                         window.hideLoadingOnMapRender = null; // Clean up
                     }
+                    
+                    // If taskID automation, click share after 1 second
+                    if (window.taskIdAutomation) {
+                        setTimeout(() => {
+                            const shareBtn = document.getElementById('share');
+                            if (shareBtn) {
+                                console.log('Clicking share button');
+                                shareBtn.click();
+                                // Then click upload with taskID and fill input
+                                setTimeout(() => {
+                                    // Click the upload with taskID button
+                                    const buttons = document.querySelectorAll('button');
+                                    const uploadBtn = Array.from(buttons).find(btn => 
+                                        btn.textContent.includes('Upload with taskID')
+                                    );
+                                    if (uploadBtn) {
+                                        console.log('Clicking upload with taskID button');
+                                        uploadBtn.click();
+                                        // Fill in the taskID input
+                                        setTimeout(() => {
+                                            const taskIdInput = document.querySelector('input[placeholder*="Task ID"], input[placeholder*="task"]');
+                                            if (taskIdInput) {
+                                                console.log('Filling taskID input:', window.taskIdAutomation);
+                                                taskIdInput.value = window.taskIdAutomation;
+                                                taskIdInput.dispatchEvent(new Event('input', { bubbles: true }));
+                                            }
+                                        }, 300);
+                                    }
+                                }, 300);
+                            }
+                        }, 1000);
+                    }
                 }}
                 {...dataDisplayProps}
 
             />
             <ShareModal
-            {...dataDisplayProps}
+                isOpen={isShareModalOpen}
+                setIsOpen={setIsShareModalOpen}
+                currentDataset={mapData}
+                dataset={mapData}
+                {...dataDisplayProps}
             />
             
             {fileToParse && <FileParser 
